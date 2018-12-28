@@ -1,6 +1,6 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !
-!   COPYRIGHT 2018 TREVOR JOHNSON
+!   COPYRIGHT 2018
 !
 !   PROGRAM:  MAIN.F
 !   LANGUAGE: FORTRAN 95
