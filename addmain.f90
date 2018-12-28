@@ -1,0 +1,33 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!
+!   COPYRIGHT 2018 TREVOR JOHNSON
+!
+!   PROGRAM:  MAIN.F
+!   LANGUAGE: FORTRAN 95
+!
+!   PURPOSE:  ADVENT OF CODE 2018 DAY 1
+!   INPUT:    INPUT.DAT
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+PROGRAM ADDMAIN
+  IMPLICIT NONE
+  DOUBLE PRECISION :: CURRDISP, NEWDISP
+  LOGICAL :: FILEEXIST
+  INTEGER :: I,M,IO
+  INQUIRE(FILE='input.dat', EXIST=FILEEXIST)
+  IF (FILEEXIST .eqv. .TRUE.) THEN
+    OPEN(UNIT=24, FILE='input.dat')
+  ELSE
+    WRITE(*,*) 'NO INPUT FILE'
+  END IF
+  CURRDISP = 0;
+  DO
+    READ(UNIT=24,FMT=*,IOSTAT=IO) NEWDISP
+    IF (IO/=0) EXIT
+    CURRDISP = CURRDISP + NEWDISP
+  END DO
+  WRITE(*,*) CURRDISP
+
+
+END PROGRAM
